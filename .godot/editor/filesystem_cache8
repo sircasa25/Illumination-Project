@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1677738988
+default_env.tres::Environment::7039372640784960027::1677738988::0::1::::<><>::
+icon.png::CompressedTexture2D::445046248578871195::1675577455::1677734583::1::::<><>::
+::res://addons/::1677734792
+::res://addons/godot-git-plugin/::1677734792
+plugin.cfg::TextFile::-1::1649530713::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1649530713::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1677734792
+::res://addons/godot-git-plugin/osx/::1677734792
+::res://addons/godot-git-plugin/win64/::1677734792
+::res://Assets/::1677739958
+ball.png::CompressedTexture2D::2831357080485673510::1675580267::1677734583::1::::<><>::
+green.png::CompressedTexture2D::8572386694998646082::1677739902::1677739962::1::::<><>::
+::res://Assets/backgrounds/::1677734791
+1.png::CompressedTexture2D::5803604378215251207::1675599020::1677734583::1::::<><>::
+2.png::CompressedTexture2D::5483937693352352086::1675599023::1677734583::1::::<><>::
+3.png::CompressedTexture2D::7989565366517007493::1675599024::1677734583::1::::<><>::
+4.png::CompressedTexture2D::1073579864886348181::1675599026::1677734583::1::::<><>::
+5.png::CompressedTexture2D::7584104159926320366::1675599027::1677734583::1::::<><>::
+::res://Scenes/::1677738988
+Ball.tscn::PackedScene::-1::1677734563::0::1::::<><>::res://Assets/ball.png<>res://Scripts/Ball.gd
+Game Scene.tscn::PackedScene::7378336625662292803::1677738988::0::1::::<><>::res://Scenes/Ball.tscn<>uid://duer7rvlrc8hq<>res://Scripts/Game Scene.gd<>uid://dgb2c8dvj3q0m<>res://Scripts/Background.gd
+::res://Scripts/::1677737953
+Background.gd::GDScript::-1::1677737953::0::1::::<>Sprite2D<>::
+Ball.gd::GDScript::-1::1677736135::0::1::::<>Sprite2D<>::
+Game Scene.gd::GDScript::-1::1677734563::0::1::::<>Node2D<>::

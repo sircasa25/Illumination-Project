@@ -1,10 +1,10 @@
-extends Sprite
+extends Sprite2D
 
 
 # Declare member variables here
-var CENTER_X = 512
-var LEFT_LIMIT = CENTER_X - 300
-var RIGHT_LIMIT = CENTER_X + 300
+var screenSize = DisplayServer.window_get_size()
+var LEFT_LIMIT = screenSize.x*0.3
+var RIGHT_LIMIT = screenSize.x*0.7
 
 var ACCELERATION = 50
 var MAX_SPEED = 10
@@ -15,13 +15,13 @@ var ATTRACTION_COEFF = 0.00001
 var speed = 0
 
 func turbulence():
-	var turbulence_acceleration = rand_range(-TURBULENCE_LIMIT,TURBULENCE_LIMIT)
+	var turbulence_acceleration = randf_range(-TURBULENCE_LIMIT,TURBULENCE_LIMIT)
 	return turbulence_acceleration
 	
-func position_displacement(position):
+func position_displacement(xpos):
 	var displacement_acceleration = 0
-	displacement_acceleration -= ATTRACTION_COEFF * (RIGHT_LIMIT - position) * (RIGHT_LIMIT - position)
-	displacement_acceleration += ATTRACTION_COEFF * (position - LEFT_LIMIT) * (position - LEFT_LIMIT)
+	displacement_acceleration -= ATTRACTION_COEFF * (RIGHT_LIMIT - xpos) * (RIGHT_LIMIT - xpos)
+	displacement_acceleration += ATTRACTION_COEFF * (xpos - LEFT_LIMIT) * (xpos - LEFT_LIMIT)
 	return displacement_acceleration
 
 #signal ball_hit_edge()
@@ -29,8 +29,8 @@ func position_displacement(position):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var initial_pos = Vector2.ZERO;
-	initial_pos.x = CENTER_X
-	initial_pos.y = 300
+	initial_pos.x = screenSize.x/2
+	initial_pos.y = screenSize.y/2
 	position = initial_pos
 
 
